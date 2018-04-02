@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="3bed3b3b170e4611a8f8f1e84fb5ec1a" Name="Diagram1">
+        <EntityTypeShape EntityType="peregrinosjmjModel.actividades" Width="1.5" PointX="0.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="peregrinosjmjModel.asistencia" Width="1.5" PointX="4.5" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="peregrinosjmjModel.inversion" Width="1.5" PointX="3" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="peregrinosjmjModel.peregrinos" Width="1.5" PointX="0.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="peregrinosjmjModel.usuarios" Width="1.5" PointX="3" PointY="5.375" IsExpanded="true" />
+        <AssociationConnector Association="peregrinosjmjModel.fk_id_actividad" ManuallyRouted="false" />
+        <AssociationConnector Association="peregrinosjmjModel.fk_id_actividad_2" ManuallyRouted="false" />
+        <AssociationConnector Association="peregrinosjmjModel.fk_id_peregrino_2" ManuallyRouted="false" />
+        <AssociationConnector Association="peregrinosjmjModel.fk_id_peregrino" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
