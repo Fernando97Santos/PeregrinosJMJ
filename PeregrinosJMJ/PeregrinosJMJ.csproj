@@ -149,6 +149,9 @@
     <EmbeddedResource Include="Vista\frmActividades.resx">
       <DependentUpon>frmActividades.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmInversion.resx">
+      <DependentUpon>frmInversion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\frmPeregrinos.resx">
       <DependentUpon>frmPeregrinos.cs</DependentUpon>
     </EmbeddedResource>
