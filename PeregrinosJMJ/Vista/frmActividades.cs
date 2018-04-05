@@ -21,7 +21,7 @@ namespace PeregrinosJMJ.Vista
         Actividades ADO = new Actividades();
         private void cargar()
         {
-            dataGridView1.DataSource = ADO.getPeregrinos();
+            dataGridView1.DataSource = ADO.getActividades();
             btnEliminar.Enabled = false;
             btnModificar.Enabled = false;
         }

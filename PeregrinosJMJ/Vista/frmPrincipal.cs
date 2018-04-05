@@ -34,5 +34,17 @@ namespace PeregrinosJMJ.Vista
             this.Hide();
             new frmUsuarios().Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new frmInversion().Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new frmAsistencias().Show();
+        }
     }
 }

@@ -20,7 +20,7 @@ namespace PeregrinosJMJ.Modelo
             return contexto.actividades.Find(codgigo);
         }
 
-        public List<actividades> getPeregrinos()
+        public List<actividades> getActividades()
         {
             return contexto.actividades.ToList();
         }

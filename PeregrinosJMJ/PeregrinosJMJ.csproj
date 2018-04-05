@@ -88,8 +88,16 @@
       <DependentUpon>Modelo.tt</DependentUpon>
     </Compile>
     <Compile Include="Controladores\Actividades.cs" />
+    <Compile Include="Controladores\Asistencia.cs" />
+    <Compile Include="Controladores\Inversion.cs" />
     <Compile Include="Controladores\Peregrino.cs" />
     <Compile Include="Controladores\Usuarios.cs" />
+    <Compile Include="Vista\frmAsistencias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmAsistencias.Designer.cs">
+      <DependentUpon>frmAsistencias.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\frmInversion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +156,9 @@
     </Compile>
     <EmbeddedResource Include="Vista\frmActividades.resx">
       <DependentUpon>frmActividades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmAsistencias.resx">
+      <DependentUpon>frmAsistencias.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\frmInversion.resx">
       <DependentUpon>frmInversion.cs</DependentUpon>
