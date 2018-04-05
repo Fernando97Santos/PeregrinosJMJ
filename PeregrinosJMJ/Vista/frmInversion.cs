@@ -50,7 +50,7 @@ namespace PeregrinosJMJ.Vista
             nuevo.producto = txtProducto.Text;
             nuevo.monto = float.Parse(txtMonto.Text);
             nuevo.id_actividad = p.id_actividad;
-            //p.inversion.Add(nuevo);
+            p.inversion.Add(nuevo);
 
             if (ADO.guardar(nuevo) == 1)
             {
@@ -71,7 +71,7 @@ namespace PeregrinosJMJ.Vista
             nuevo.producto = txtProducto.Text;
             nuevo.monto = float.Parse(txtMonto.Text);
             nuevo.id_actividad = int.Parse(cmbActividad.SelectedValue.ToString());
-            //p.inversion.Add(nuevo);
+            p.inversion.Add(nuevo);
 
             if (ADO.modificar(nuevo) == 1)
             {

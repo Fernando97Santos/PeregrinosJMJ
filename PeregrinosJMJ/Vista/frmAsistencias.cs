@@ -79,8 +79,8 @@ namespace PeregrinosJMJ.Vista
             nuevo.asis = cbxAsistencia.Checked ? 1 : 0;
             nuevo.id_actividad = a.id_actividad;
             nuevo.id_peregrino = p.id_peregrino;
-            //p.asistencia.Add(nuevo);
-            //a.asistencia.Add(nuevo);
+            p.asistencia.Add(nuevo);
+            a.asistencia.Add(nuevo);
 
             if (ADO.modificar(nuevo) == 1)
             {
