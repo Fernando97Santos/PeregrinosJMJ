@@ -1,0 +1,5 @@
+-Abrir cuadro de herramientas
+-click derecho en [cuadro de herramientas]>[general]
+-click en [elegir elemento]
+-se abrira una ventana, click en [examinar] seleccionar el dll
+-click en aceptar
