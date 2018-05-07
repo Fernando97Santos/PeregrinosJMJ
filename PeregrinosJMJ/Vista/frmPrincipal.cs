@@ -71,8 +71,12 @@ namespace PeregrinosJMJ.Vista
         
         private void btnAsistencia_Click(object sender, EventArgs e)
         {
-            mostrar(new frmAsistencias());
+            mostrar(new frmAsistencias(this));
             this.btnAsistencia.Normalcolor = this.btnAsistencia.OnHovercolor ;
+        }
+        public void mostrarAsistencia() {
+            mostrar(new frmAsistencias(this));
+            this.btnAsistencia.Normalcolor = this.btnAsistencia.OnHovercolor;
         }
 
         private void btnInve_Click_1(object sender, EventArgs e)
