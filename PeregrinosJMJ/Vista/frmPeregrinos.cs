@@ -17,11 +17,16 @@ namespace PeregrinosJMJ
         {
             InitializeComponent();
             cargar();
+            panel1.AutoScroll = false;
+            panel1.HorizontalScroll.Enabled = false;
+            panel1.HorizontalScroll.Visible = false;
+            panel1.HorizontalScroll.Maximum = 0;
+            panel1.AutoScroll = true;
         }
 
         Peregrino ADO = new Peregrino();
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnAgregar_Click(object sender, EventArgs e)
         {
             peregrinos nuevo = new peregrinos();
             nuevo.nombres = txtNombre.Text;
@@ -49,28 +54,24 @@ namespace PeregrinosJMJ
             dataGridView1.DataSource = ADO.getPeregrinos();
             btnEliminar.Enabled = false;
             btnModificar.Enabled = false;
+            dataGridView1.Columns[0].HeaderText = "Codigo";
+            dataGridView1.Columns[0].Name = "Codigo";
+            dataGridView1.Columns[0].Visible = false;
+            dataGridView1.Columns[1].HeaderText = "Nombre";
+            dataGridView1.Columns[2].HeaderText = "Apellido";
+            dataGridView1.Columns[3].HeaderText = "Edad";
+            dataGridView1.Columns[4].HeaderText = "Sexo";
+            dataGridView1.Columns[5].HeaderText = "Correo";
+            dataGridView1.Columns[6].HeaderText = "Telefono Casa";
+            dataGridView1.Columns[7].HeaderText = "Telefono Movil";
+            dataGridView1.Columns[8].HeaderText = "Ministerio";
+            dataGridView1.Columns[9].HeaderText = "JMJ";
+            dataGridView1.Columns[10].Visible = false;
+            dataGridView1.Columns[11].Visible = false;
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (dataGridView1.RowCount > 0)
-            {
-                txtCodigo.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-                txtNombre.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-                txtApellido.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-                txtEdad.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
-                txtSexo.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
-                txtCorreo.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
-                txtCasa.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
-                txtMovil.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
-                txtMinisterio.Text = dataGridView1.CurrentRow.Cells[8].Value.ToString();
-                txtJMJ.Text = dataGridView1.CurrentRow.Cells[9].Value.ToString();
-                btnEliminar.Enabled = true;
-                btnModificar.Enabled = true;
-            }
-        }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btnEliminar_Click(object sender, EventArgs e)
         {
             if (ADO.eliminar(int.Parse(txtCodigo.Text)) == 1)
             {
@@ -83,7 +84,7 @@ namespace PeregrinosJMJ
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnModificar_Click(object sender, EventArgs e)
         {
             peregrinos nuevo = ADO.buscar(int.Parse(txtCodigo.Text));
             nuevo.id_peregrino = int.Parse(txtCodigo.Text);
@@ -106,6 +107,79 @@ namespace PeregrinosJMJ
             {
                 MessageBox.Show("Ha ocurrido un error... Vuelva a intentarlo D:");
             }
+        }
+        private void limpiar()
+        {
+            foreach(Control text in this.panel1.Controls)
+            {
+                if(!(text is Label))
+                {
+                    text.Text = "";
+                }
+            }
+        }
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            limpiar();
+        }
+
+        private void dataGridView1_CurrentCellChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dataGridView1.RowCount > 0)
+                {
+                    int index = this.panel1.Controls.Count/2 -1;
+                    foreach (Control text in this.panel1.Controls)
+                    {
+                       
+                        if (!(text is Label))
+                        {
+                           
+                            text.Text = dataGridView1.CurrentRow.Cells[index].Value.ToString();
+                            index--;
+                        }
+                    }
+                    btnEliminar.Enabled = true;
+                    btnModificar.Enabled = true;
+                }
+            }
+            catch (Exception )
+            {
+                // MessageBox.Show("Error al consultar: "+ e);
+                limpiar();
+            }
+        }
+
+        private void dataGridView1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dataGridView1.RowCount > 0)
+                {
+                    int index = this.panel1.Controls.Count/2 -1;
+                    foreach (Control text in this.panel1.Controls)
+                    {
+                        if(!(text is Label))
+                        {
+                            text.Text = dataGridView1.CurrentRow.Cells[index].Value.ToString();
+                            index--;
+                        }
+                    }
+                    btnEliminar.Enabled = true;
+                    btnModificar.Enabled = true;
+                }
+            }
+            catch (Exception)
+            {
+                // MessageBox.Show("Error al consultar: " + e);
+                limpiar();
+            }
+        }
+
+        private void frmPeregrino_VisibleChanged(object sender, EventArgs e)
+        {
+            limpiar();
         }
     }
 }

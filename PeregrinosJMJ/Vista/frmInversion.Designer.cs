@@ -352,6 +352,7 @@
             this.Name = "frmInversion";
             this.Text = "frmInversion";
             this.Load += new System.EventHandler(this.frmInversion_Load);
+            this.VisibleChanged += new System.EventHandler(this.frmInversion_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

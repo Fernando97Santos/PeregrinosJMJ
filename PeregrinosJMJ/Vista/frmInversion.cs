@@ -214,5 +214,10 @@ namespace PeregrinosJMJ.Vista
         {
             limpiar();
         }
+
+        private void frmInversion_VisibleChanged(object sender, EventArgs e)
+        {
+            limpiar();
+        }
     }
 }

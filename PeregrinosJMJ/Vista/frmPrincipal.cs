@@ -38,16 +38,16 @@ namespace PeregrinosJMJ.Vista
             this.pnlBody.Tag = content;
                        
            this.pnlBody.Height = content.Height + 10;
-            if(content.Height <= alturaForm)
+            if(content.Height < alturaForm)
             {
                 //this.Height = 167 + 37;
-                this.Height = alturaForm;
-                this.pnlMenu.Height = alturaMenu;
+                this.Height = alturaForm +20;
+                this.pnlMenu.Height = alturaMenu+20;
             }
             else
             {
-                this.Height = content.Height + 37 +10;
-                this.pnlMenu.Height = content.Height + 10;
+                this.Height = content.Height + 37 +20;
+                this.pnlMenu.Height = content.Height + 20;
             }
             pnlBody.Width = content.Width +25;
             this.Width = pnlMenu.Width + content.Width+25;
