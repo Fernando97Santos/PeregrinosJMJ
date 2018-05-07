@@ -48,6 +48,8 @@ namespace PeregrinosJMJ.Vista
             //cmbPeregrino.DataSource = auxPere.getPeregrinos();
             //cmbPeregrino.DisplayMember = "nombres";
             //cmbPeregrino.ValueMember = "id_peregrino";
+            cmbActividad.Clear();
+            cmbPeregrino.Clear();
             foreach (actividades act in actividadesList)
             {
                 cmbActividad.AddItem(act.actividad);
