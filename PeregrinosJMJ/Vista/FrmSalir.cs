@@ -35,6 +35,7 @@ namespace PeregrinosJMJ.Vista
         {
             padre.Enabled = true;
             padre.WindowState = FormWindowState.Normal;
+            padre.ShowInTaskbar = true;
             this.Hide();
         }
         //                  PROGRAMANDO QUE SE PUEDA MOVER FORM SIN BORDES

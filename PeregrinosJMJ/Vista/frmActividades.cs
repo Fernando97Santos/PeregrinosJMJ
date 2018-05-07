@@ -26,6 +26,24 @@ namespace PeregrinosJMJ.Vista
             dataGridView1.DataSource = ADO.getActividades();
             btnEliminar.Enabled = false;
             btnModificar.Enabled = false;
+            dataGridView1.Columns[0].HeaderText = "Codigo";
+            dataGridView1.Columns[0].Name = "Codigo";
+            dataGridView1.Columns[0].Visible = false;
+            dataGridView1.Columns[1].HeaderText = "Actividad";
+            dataGridView1.Columns[1].Name = "Actividad";
+            dataGridView1.Columns[2].Name = "Fecha";
+            dataGridView1.Columns[2].HeaderText = "Fecha";
+            dataGridView1.Columns[3].Name = "Lugar";
+            dataGridView1.Columns[3].HeaderText = "Lugar";
+            dataGridView1.Columns[4].Name = "Ganancia";
+            dataGridView1.Columns[4].HeaderText = "Ganancia";
+            dataGridView1.Columns[5].Visible = false;
+            dataGridView1.Columns[6].Visible = false;
+            dataGridView1.Columns[1].Width = dataGridView1.Columns[1].Width + 30;
+            dataGridView1.Columns[2].Width = dataGridView1.Columns[2].Width + 20;
+            dataGridView1.Columns[3].Width = dataGridView1.Columns[3].Width + 30;
+            dataGridView1.Columns[4].Width = dataGridView1.Columns[4].Width + 20;
+            dataGridView1.Refresh();
         }
         private void btnAgregar_Click(object sender, EventArgs e)
         {

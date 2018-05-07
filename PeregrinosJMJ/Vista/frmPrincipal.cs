@@ -133,6 +133,7 @@ namespace PeregrinosJMJ.Vista
 
             new FrmSalir(this).Show();
             this.WindowState = FormWindowState.Minimized;
+            this.ShowInTaskbar = false;
             this.Enabled = false;
         }
     }
