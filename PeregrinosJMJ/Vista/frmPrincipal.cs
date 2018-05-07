@@ -22,38 +22,47 @@ namespace PeregrinosJMJ.Vista
         int alturaMenu = 0;
         private void mostrar(Form content)
         {
-            Color blanco = Color.FromArgb(255, 255, 255);
-            this.btnActi.Normalcolor = blanco;
-            this.btnAsistencia.Normalcolor = blanco;
-            this.btnInve.Normalcolor = blanco;
-            this.btnPere.Normalcolor = blanco;
-            this.btnUsuarios.Normalcolor = blanco;
-            if (this.pnlBody.Controls.Count > 0)
-                this.pnlBody.Controls.RemoveAt(0);
-            content.TopLevel = false;
-            content.FormBorderStyle = FormBorderStyle.None;
-            content.Dock = DockStyle.Fill;
-            pnlBody.Padding = new Padding(10);
-            this.pnlBody.Controls.Add(content);
-            this.pnlBody.Tag = content;
-                       
-           this.pnlBody.Height = content.Height + 10;
-            if(content.Height < alturaForm)
+            try
             {
-                //this.Height = 167 + 37;
-                this.Height = alturaForm +20;
-                this.pnlMenu.Height = alturaMenu+20;
+                    Color blanco = Color.FromArgb(255, 255, 255);
+                    this.btnActi.Normalcolor = blanco;
+                    this.btnAsistencia.Normalcolor = blanco;
+                    this.btnInve.Normalcolor = blanco;
+                    this.btnPere.Normalcolor = blanco;
+                    this.btnUsuarios.Normalcolor = blanco;
+                    if (this.pnlBody.Controls.Count > 0)
+                        this.pnlBody.Controls.RemoveAt(0);
+                    content.TopLevel = false;
+                    content.FormBorderStyle = FormBorderStyle.None;
+                    content.Dock = DockStyle.Fill;
+                    pnlBody.Padding = new Padding(10);
+                    this.pnlBody.Controls.Add(content);
+                    this.pnlBody.Tag = content;
+
+                    this.pnlBody.Height = content.Height + 20;
+                    if (content.Height < alturaForm)
+                    {
+                        //this.Height = 167 + 37;
+                        this.Height = alturaForm + 20;
+                        this.pnlMenu.Height = alturaMenu + 20;
+                    this.pnlBody.Height = alturaMenu + 20;
+                    }
+                    else
+                    {
+                        this.Height = content.Height + 37 + 20;
+                        this.pnlMenu.Height = content.Height + 20;
+                    }
+                    pnlBody.Width = content.Width + 25;
+                    this.Width = pnlMenu.Width + content.Width + 25;
+                    btnMinim.Left = this.Width - 37;
+                    pnlHeader.Width = this.Width;
+                    content.Show();
             }
-            else
+            catch (Exception)
             {
-                this.Height = content.Height + 37 +20;
-                this.pnlMenu.Height = content.Height + 20;
+                new frmPrincipal().Show();
+                this.Close();
             }
-            pnlBody.Width = content.Width +25;
-            this.Width = pnlMenu.Width + content.Width+25;
-            btnMinim.Left = this.Width - 37;
-            pnlHeader.Width = this.Width;
-            content.Show();
         }
 
 
@@ -94,8 +103,17 @@ namespace PeregrinosJMJ.Vista
         //                  PROGRAMANDO QUE SE PUEDA MOVER FORM SIN BORDES
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.frmPrincipal_Load);
-            this.pnlHeader.MouseMove += new System.Windows.Forms.MouseEventHandler(this.frmPrincipal_MouseMove);
+            try
+            {
+                this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.frmPrincipal_Load);
+                this.pnlHeader.MouseMove += new System.Windows.Forms.MouseEventHandler(this.frmPrincipal_MouseMove);
+            }
+            catch (Exception)
+            {
+                new frmPrincipal().Show();
+                this.Close();
+            }
+
 
         }
         const int WM_SYSCOMMAND = 0x112;
@@ -112,19 +130,41 @@ namespace PeregrinosJMJ.Vista
 
         private void moverForm()
         {
-            ReleaseCapture();
-            SendMessage(this.Handle, WM_SYSCOMMAND, MOUSE_MOVE, 0);
+             try { 
+                ReleaseCapture();
+                SendMessage(this.Handle, WM_SYSCOMMAND, MOUSE_MOVE, 0);
+            }
+            catch (Exception)
+            {
+                new frmPrincipal().Show();
+                this.Close();
+            }
         }
 
         private void frmPrincipal_MouseMove(object sender, MouseEventArgs e)
         {
-            moverForm();
+            try
+            {
+              moverForm();
+            }
+            catch (Exception)
+            {
+                new frmPrincipal().Show();
+                this.Close();
+            }
         }
 
         private void pnlHeader_MouseHover(object sender, EventArgs e)
         {
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.frmPrincipal_Load);
-            this.pnlHeader.MouseMove += new System.Windows.Forms.MouseEventHandler(this.frmPrincipal_MouseMove);
+            try { 
+                this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.frmPrincipal_Load);
+                this.pnlHeader.MouseMove += new System.Windows.Forms.MouseEventHandler(this.frmPrincipal_MouseMove);
+            }
+            catch (Exception)
+            {
+                new frmPrincipal().Show();
+                this.Close();
+            }
         }
 
         private void btnMinim_Click(object sender, EventArgs e)
@@ -139,6 +179,17 @@ namespace PeregrinosJMJ.Vista
             this.WindowState = FormWindowState.Minimized;
             this.ShowInTaskbar = false;
             this.Enabled = false;
+        }
+
+        private void pnlBody_Paint(object sender, PaintEventArgs e)
+        {
+            
+        }
+
+        private void frmPrincipal_Click(object sender, EventArgs e)
+        {
+            new frmPrincipal().Show();
+            this.Close();
         }
     }
 }

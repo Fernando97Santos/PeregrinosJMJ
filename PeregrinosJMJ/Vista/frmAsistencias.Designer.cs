@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label10 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -45,14 +45,16 @@
             this.btnModificar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnGuardar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.dataGridView1 = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(135)))), ((int)(((byte)(90)))));
-            this.label10.Location = new System.Drawing.Point(10, 15);
+            this.label10.Location = new System.Drawing.Point(6, 12);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(43, 13);
             this.label10.TabIndex = 53;
@@ -62,7 +64,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(135)))), ((int)(((byte)(90)))));
-            this.label4.Location = new System.Drawing.Point(13, 118);
+            this.label4.Location = new System.Drawing.Point(9, 115);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(54, 13);
             this.label4.TabIndex = 50;
@@ -72,7 +74,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(135)))), ((int)(((byte)(90)))));
-            this.label3.Location = new System.Drawing.Point(170, 88);
+            this.label3.Location = new System.Drawing.Point(166, 85);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(58, 13);
             this.label3.TabIndex = 49;
@@ -82,7 +84,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(135)))), ((int)(((byte)(90)))));
-            this.label1.Location = new System.Drawing.Point(13, 88);
+            this.label1.Location = new System.Drawing.Point(9, 85);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(77, 13);
             this.label1.TabIndex = 48;
@@ -92,7 +94,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(135)))), ((int)(((byte)(90)))));
-            this.label2.Location = new System.Drawing.Point(13, 183);
+            this.label2.Location = new System.Drawing.Point(9, 180);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(55, 13);
             this.label2.TabIndex = 60;
@@ -111,7 +113,7 @@
             this.txtCodigo.LineIdleColor = System.Drawing.Color.Gray;
             this.txtCodigo.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(135)))), ((int)(((byte)(90)))));
             this.txtCodigo.LineThickness = 3;
-            this.txtCodigo.Location = new System.Drawing.Point(13, 32);
+            this.txtCodigo.Location = new System.Drawing.Point(9, 29);
             this.txtCodigo.Margin = new System.Windows.Forms.Padding(4);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(241, 41);
@@ -125,7 +127,7 @@
             this.cbxPreAsistencia.Checked = true;
             this.cbxPreAsistencia.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(135)))), ((int)(((byte)(90)))));
             this.cbxPreAsistencia.ForeColor = System.Drawing.Color.White;
-            this.cbxPreAsistencia.Location = new System.Drawing.Point(96, 88);
+            this.cbxPreAsistencia.Location = new System.Drawing.Point(92, 85);
             this.cbxPreAsistencia.Name = "cbxPreAsistencia";
             this.cbxPreAsistencia.Size = new System.Drawing.Size(20, 20);
             this.cbxPreAsistencia.TabIndex = 65;
@@ -137,7 +139,7 @@
             this.cbxAsistencia.Checked = true;
             this.cbxAsistencia.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(135)))), ((int)(((byte)(90)))));
             this.cbxAsistencia.ForeColor = System.Drawing.Color.White;
-            this.cbxAsistencia.Location = new System.Drawing.Point(234, 88);
+            this.cbxAsistencia.Location = new System.Drawing.Point(230, 85);
             this.cbxAsistencia.Name = "cbxAsistencia";
             this.cbxAsistencia.Size = new System.Drawing.Size(20, 20);
             this.cbxAsistencia.TabIndex = 66;
@@ -148,7 +150,7 @@
             this.cmbActividad.BorderRadius = 3;
             this.cmbActividad.ForeColor = System.Drawing.Color.White;
             this.cmbActividad.Items = new string[0];
-            this.cmbActividad.Location = new System.Drawing.Point(16, 134);
+            this.cmbActividad.Location = new System.Drawing.Point(12, 131);
             this.cmbActividad.Name = "cmbActividad";
             this.cmbActividad.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(135)))), ((int)(((byte)(90)))));
             this.cmbActividad.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(135)))), ((int)(((byte)(90)))));
@@ -162,7 +164,7 @@
             this.cmbPeregrino.BorderRadius = 3;
             this.cmbPeregrino.ForeColor = System.Drawing.Color.White;
             this.cmbPeregrino.Items = new string[0];
-            this.cmbPeregrino.Location = new System.Drawing.Point(16, 199);
+            this.cmbPeregrino.Location = new System.Drawing.Point(12, 196);
             this.cmbPeregrino.Name = "cmbPeregrino";
             this.cmbPeregrino.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(135)))), ((int)(((byte)(90)))));
             this.cmbPeregrino.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(135)))), ((int)(((byte)(90)))));
@@ -191,7 +193,7 @@
             this.btnLimpiar.IconVisible = true;
             this.btnLimpiar.IconZoom = 90D;
             this.btnLimpiar.IsTab = false;
-            this.btnLimpiar.Location = new System.Drawing.Point(695, 186);
+            this.btnLimpiar.Location = new System.Drawing.Point(695, 216);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(135)))), ((int)(((byte)(90)))));
             this.btnLimpiar.OnHovercolor = System.Drawing.Color.White;
@@ -226,7 +228,7 @@
             this.btnEliminar.IconVisible = true;
             this.btnEliminar.IconZoom = 90D;
             this.btnEliminar.IsTab = false;
-            this.btnEliminar.Location = new System.Drawing.Point(553, 186);
+            this.btnEliminar.Location = new System.Drawing.Point(553, 216);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(135)))), ((int)(((byte)(90)))));
             this.btnEliminar.OnHovercolor = System.Drawing.Color.White;
@@ -261,7 +263,7 @@
             this.btnModificar.IconVisible = true;
             this.btnModificar.IconZoom = 90D;
             this.btnModificar.IsTab = false;
-            this.btnModificar.Location = new System.Drawing.Point(415, 186);
+            this.btnModificar.Location = new System.Drawing.Point(415, 216);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(135)))), ((int)(((byte)(90)))));
             this.btnModificar.OnHovercolor = System.Drawing.Color.White;
@@ -296,7 +298,7 @@
             this.btnGuardar.IconVisible = true;
             this.btnGuardar.IconZoom = 90D;
             this.btnGuardar.IsTab = false;
-            this.btnGuardar.Location = new System.Drawing.Point(271, 186);
+            this.btnGuardar.Location = new System.Drawing.Point(271, 216);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(135)))), ((int)(((byte)(90)))));
             this.btnGuardar.OnHovercolor = System.Drawing.Color.White;
@@ -312,19 +314,19 @@
             // 
             // dataGridView1
             // 
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(135)))), ((int)(((byte)(90)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(135)))), ((int)(((byte)(90)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.DoubleBuffered = true;
             this.dataGridView1.EnableHeadersVisualStyles = false;
@@ -336,37 +338,47 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(541, 157);
+            this.dataGridView1.Size = new System.Drawing.Size(541, 193);
             this.dataGridView1.TabIndex = 73;
             this.dataGridView1.CurrentCellChanged += new System.EventHandler(this.dataGridView1_CurrentCellChanged);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.txtCodigo);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.cmbPeregrino);
+            this.panel1.Controls.Add(this.cbxPreAsistencia);
+            this.panel1.Controls.Add(this.cmbActividad);
+            this.panel1.Controls.Add(this.cbxAsistencia);
+            this.panel1.Location = new System.Drawing.Point(0, 12);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(265, 252);
+            this.panel1.TabIndex = 74;
             // 
             // frmAsistencias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(224)))), ((int)(((byte)(163)))));
-            this.ClientSize = new System.Drawing.Size(824, 266);
+            this.ClientSize = new System.Drawing.Size(824, 276);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.cmbPeregrino);
-            this.Controls.Add(this.cmbActividad);
-            this.Controls.Add(this.cbxAsistencia);
-            this.Controls.Add(this.cbxPreAsistencia);
-            this.Controls.Add(this.txtCodigo);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label1);
             this.Name = "frmAsistencias";
             this.Text = "frmAsistencias";
             this.VisibleChanged += new System.EventHandler(this.frmAsistencias_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -386,5 +398,6 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnModificar;
         private Bunifu.Framework.UI.BunifuFlatButton btnGuardar;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dataGridView1;
+        private System.Windows.Forms.Panel panel1;
     }
 }

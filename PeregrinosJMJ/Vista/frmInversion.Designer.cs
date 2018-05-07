@@ -43,14 +43,16 @@
             this.btnEliminar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnModificar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnAgregar = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(135)))), ((int)(((byte)(90)))));
-            this.label10.Location = new System.Drawing.Point(12, 15);
+            this.label10.Location = new System.Drawing.Point(5, 4);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(43, 13);
             this.label10.TabIndex = 41;
@@ -60,7 +62,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(135)))), ((int)(((byte)(90)))));
-            this.label4.Location = new System.Drawing.Point(13, 233);
+            this.label4.Location = new System.Drawing.Point(6, 222);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(54, 13);
             this.label4.TabIndex = 38;
@@ -70,7 +72,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(135)))), ((int)(((byte)(90)))));
-            this.label3.Location = new System.Drawing.Point(12, 160);
+            this.label3.Location = new System.Drawing.Point(5, 149);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(40, 13);
             this.label3.TabIndex = 37;
@@ -80,7 +82,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(135)))), ((int)(((byte)(90)))));
-            this.label1.Location = new System.Drawing.Point(10, 88);
+            this.label1.Location = new System.Drawing.Point(3, 77);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 13);
             this.label1.TabIndex = 36;
@@ -99,7 +101,7 @@
             this.txtCodigo.LineIdleColor = System.Drawing.Color.Gray;
             this.txtCodigo.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(135)))), ((int)(((byte)(90)))));
             this.txtCodigo.LineThickness = 3;
-            this.txtCodigo.Location = new System.Drawing.Point(13, 32);
+            this.txtCodigo.Location = new System.Drawing.Point(6, 21);
             this.txtCodigo.Margin = new System.Windows.Forms.Padding(4);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(241, 41);
@@ -118,7 +120,7 @@
             this.txtProducto.LineIdleColor = System.Drawing.Color.Gray;
             this.txtProducto.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(135)))), ((int)(((byte)(90)))));
             this.txtProducto.LineThickness = 3;
-            this.txtProducto.Location = new System.Drawing.Point(17, 105);
+            this.txtProducto.Location = new System.Drawing.Point(10, 94);
             this.txtProducto.Margin = new System.Windows.Forms.Padding(4);
             this.txtProducto.Name = "txtProducto";
             this.txtProducto.Size = new System.Drawing.Size(241, 41);
@@ -137,7 +139,7 @@
             this.txtMonto.LineIdleColor = System.Drawing.Color.Gray;
             this.txtMonto.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(135)))), ((int)(((byte)(90)))));
             this.txtMonto.LineThickness = 3;
-            this.txtMonto.Location = new System.Drawing.Point(13, 179);
+            this.txtMonto.Location = new System.Drawing.Point(6, 168);
             this.txtMonto.Margin = new System.Windows.Forms.Padding(4);
             this.txtMonto.Name = "txtMonto";
             this.txtMonto.Size = new System.Drawing.Size(241, 41);
@@ -150,7 +152,7 @@
             this.cmbActividad.BorderRadius = 3;
             this.cmbActividad.ForeColor = System.Drawing.Color.White;
             this.cmbActividad.Items = new string[0];
-            this.cmbActividad.Location = new System.Drawing.Point(15, 249);
+            this.cmbActividad.Location = new System.Drawing.Point(8, 238);
             this.cmbActividad.Name = "cmbActividad";
             this.cmbActividad.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(135)))), ((int)(((byte)(90)))));
             this.cmbActividad.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(135)))), ((int)(((byte)(90)))));
@@ -330,32 +332,42 @@
             this.btnAgregar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.txtCodigo);
+            this.panel1.Controls.Add(this.txtProducto);
+            this.panel1.Controls.Add(this.cmbActividad);
+            this.panel1.Controls.Add(this.txtMonto);
+            this.panel1.Location = new System.Drawing.Point(12, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(257, 291);
+            this.panel1.TabIndex = 79;
+            // 
             // frmInversion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(224)))), ((int)(((byte)(163)))));
             this.ClientSize = new System.Drawing.Size(828, 303);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.cmbActividad);
-            this.Controls.Add(this.txtMonto);
-            this.Controls.Add(this.txtProducto);
-            this.Controls.Add(this.txtCodigo);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label1);
             this.Name = "frmInversion";
             this.Text = "frmInversion";
             this.Load += new System.EventHandler(this.frmInversion_Load);
             this.VisibleChanged += new System.EventHandler(this.frmInversion_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -373,5 +385,6 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnEliminar;
         private Bunifu.Framework.UI.BunifuFlatButton btnModificar;
         private Bunifu.Framework.UI.BunifuFlatButton btnAgregar;
+        private System.Windows.Forms.Panel panel1;
     }
 }

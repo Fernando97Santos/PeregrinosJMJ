@@ -117,6 +117,8 @@ namespace PeregrinosJMJ
                     text.Text = "";
                 }
             }
+            btnModificar.Enabled = false;
+            btnEliminar.Enabled = false;
         }
         private void btnLimpiar_Click(object sender, EventArgs e)
         {

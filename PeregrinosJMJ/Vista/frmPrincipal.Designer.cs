@@ -282,7 +282,7 @@
             // 
             // pnlHeader
             // 
-            this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(224)))), ((int)(((byte)(163)))));
+            this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(218)))), ((int)(((byte)(145)))));
             this.pnlHeader.Controls.Add(this.btnMinim);
             this.pnlHeader.Cursor = System.Windows.Forms.Cursors.SizeAll;
             this.pnlHeader.Location = new System.Drawing.Point(-1, 0);
@@ -309,10 +309,11 @@
             // 
             // pnlBody
             // 
-            this.pnlBody.Location = new System.Drawing.Point(172, 36);
+            this.pnlBody.Location = new System.Drawing.Point(166, 36);
             this.pnlBody.Name = "pnlBody";
-            this.pnlBody.Size = new System.Drawing.Size(806, 331);
+            this.pnlBody.Size = new System.Drawing.Size(824, 342);
             this.pnlBody.TabIndex = 8;
+            this.pnlBody.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlBody_Paint);
             // 
             // frmPrincipal
             // 
@@ -328,6 +329,7 @@
             this.Text = "ViajerosJMJ";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.frmPrincipal_Load);
+            this.Click += new System.EventHandler(this.frmPrincipal_Click);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.frmPrincipal_MouseMove);
             this.pnlMenu.ResumeLayout(false);
             this.pnlHeader.ResumeLayout(false);
