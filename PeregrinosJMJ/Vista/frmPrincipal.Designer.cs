@@ -32,15 +32,15 @@
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.pnlMenu = new System.Windows.Forms.Panel();
-            this.pnlHeader = new System.Windows.Forms.Panel();
-            this.pnlBody = new System.Windows.Forms.Panel();
             this.btnSalir = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnActi = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnInve = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnAsistencia = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnPere = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnUsuarios = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.pnlHeader = new System.Windows.Forms.Panel();
             this.btnMinim = new Bunifu.Framework.UI.BunifuImageButton();
+            this.pnlBody = new System.Windows.Forms.Panel();
             this.pnlMenu.SuspendLayout();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinim)).BeginInit();
@@ -58,7 +58,7 @@
             // 
             // pnlMenu
             // 
-            this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(224)))), ((int)(((byte)(163)))));
+            this.pnlMenu.BackColor = System.Drawing.Color.White;
             this.pnlMenu.Controls.Add(this.btnSalir);
             this.pnlMenu.Controls.Add(this.btnActi);
             this.pnlMenu.Controls.Add(this.btnInve);
@@ -69,24 +69,6 @@
             this.pnlMenu.Name = "pnlMenu";
             this.pnlMenu.Size = new System.Drawing.Size(167, 342);
             this.pnlMenu.TabIndex = 6;
-            // 
-            // pnlHeader
-            // 
-            this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(224)))), ((int)(((byte)(163)))));
-            this.pnlHeader.Controls.Add(this.btnMinim);
-            this.pnlHeader.Cursor = System.Windows.Forms.Cursors.SizeAll;
-            this.pnlHeader.Location = new System.Drawing.Point(-1, 0);
-            this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(994, 37);
-            this.pnlHeader.TabIndex = 7;
-            this.pnlHeader.MouseHover += new System.EventHandler(this.pnlHeader_MouseHover);
-            // 
-            // pnlBody
-            // 
-            this.pnlBody.Location = new System.Drawing.Point(172, 36);
-            this.pnlBody.Name = "pnlBody";
-            this.pnlBody.Size = new System.Drawing.Size(806, 331);
-            this.pnlBody.TabIndex = 8;
             // 
             // btnSalir
             // 
@@ -298,6 +280,17 @@
             this.btnUsuarios.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click_1);
             // 
+            // pnlHeader
+            // 
+            this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(224)))), ((int)(((byte)(163)))));
+            this.pnlHeader.Controls.Add(this.btnMinim);
+            this.pnlHeader.Cursor = System.Windows.Forms.Cursors.SizeAll;
+            this.pnlHeader.Location = new System.Drawing.Point(-1, 0);
+            this.pnlHeader.Name = "pnlHeader";
+            this.pnlHeader.Size = new System.Drawing.Size(994, 37);
+            this.pnlHeader.TabIndex = 7;
+            this.pnlHeader.MouseHover += new System.EventHandler(this.pnlHeader_MouseHover);
+            // 
             // btnMinim
             // 
             this.btnMinim.BackColor = System.Drawing.Color.Transparent;
@@ -314,10 +307,18 @@
             this.btnMinim.Zoom = 10;
             this.btnMinim.Click += new System.EventHandler(this.btnMinim_Click);
             // 
+            // pnlBody
+            // 
+            this.pnlBody.Location = new System.Drawing.Point(172, 36);
+            this.pnlBody.Name = "pnlBody";
+            this.pnlBody.Size = new System.Drawing.Size(806, 331);
+            this.pnlBody.TabIndex = 8;
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(224)))), ((int)(((byte)(163)))));
             this.ClientSize = new System.Drawing.Size(990, 379);
             this.Controls.Add(this.pnlBody);
             this.Controls.Add(this.pnlMenu);

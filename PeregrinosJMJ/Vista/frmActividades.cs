@@ -17,7 +17,9 @@ namespace PeregrinosJMJ.Vista
         {
             InitializeComponent();
             cargar();
+            limpiar();
         }
+
         Actividades ADO = new Actividades();
         private void cargar()
         {
@@ -42,6 +44,7 @@ namespace PeregrinosJMJ.Vista
             {
                 MessageBox.Show("Ha ocurrido un error... Vuelva a intentarlo D:");
             }
+
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -77,18 +80,119 @@ namespace PeregrinosJMJ.Vista
             }
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+
+
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.RowCount > 0)
+            actividades nuevo = new actividades();
+            nuevo.actividad = txtActividad.Text;
+            nuevo.fecha = txtFecha.Value.Date;
+            nuevo.lugar = txtLugar.Text;
+            nuevo.ganacia = float.Parse(txtGanancia.Text);
+
+            if (ADO.agregar(nuevo) == 1)
             {
-                txtCodigo.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-                txtActividad.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-                txtFecha.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-                txtLugar.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
-                txtGanancia.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
-                btnEliminar.Enabled = true;
-                btnModificar.Enabled = true;
+                MessageBox.Show("Actividad agregada con exito :D");
+                cargar();
             }
+            else
+            {
+                MessageBox.Show("Ha ocurrido un error... Vuelva a intentarlo D:");
+            }
+        }
+
+        private void btnModi_Click(object sender, EventArgs e)
+        {
+            actividades nuevo = ADO.buscar(int.Parse(txtCodigo.Text));
+            nuevo.id_actividad = int.Parse(txtCodigo.Text);
+            nuevo.actividad = txtActividad.Text;
+            nuevo.fecha = txtFecha.Value.Date;
+            nuevo.lugar = txtLugar.Text;
+            nuevo.ganacia = float.Parse(txtGanancia.Text);
+
+            if (ADO.modificar(nuevo) == 1)
+            {
+                MessageBox.Show("Actividad modificada con exito :D");
+                cargar();
+            }
+            else
+            {
+                MessageBox.Show("Ha ocurrido un error... Vuelva a intentarlo D:");
+            }
+        }
+
+        private void btnElim_Click(object sender, EventArgs e)
+        {
+            if (ADO.eliminar(int.Parse(txtCodigo.Text)) == 1)
+            {
+                MessageBox.Show("Actividad eliminada con exito :D");
+                cargar();
+            }
+            else
+            {
+                MessageBox.Show("Ha ocurrido un error... Vuelva a intentarlo D:");
+            }
+        }
+
+        private void dataGridView1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dataGridView1.RowCount > 0)
+                {
+                    txtCodigo.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                    txtActividad.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+                    txtFecha.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+                    txtLugar.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+                    txtGanancia.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+                    btnEliminar.Enabled = true;
+                    btnModificar.Enabled = true;
+                }
+            }
+            catch (Exception)
+            {
+                limpiar();
+            }
+        }
+
+        private void dataGridView1_CurrentCellChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dataGridView1.RowCount > 0)
+                {
+                    txtCodigo.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                    txtActividad.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+                    txtFecha.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+                    txtLugar.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+                    txtGanancia.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+                    btnEliminar.Enabled = true;
+                    btnModificar.Enabled = true;
+                }
+            }
+            catch (Exception)
+            {
+                limpiar();
+            }
+        }
+        private void limpiar()
+        {
+            this.txtCodigo.Text = "";
+            this.txtActividad.Text = "";
+            this.txtGanancia.Text = "";
+            this.txtLugar.Text = "";
+            this.txtFecha.ResetText();
+            btnModificar.Enabled = false;
+            btnEliminar.Enabled = false;
+        }
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            limpiar();
+        }
+
+        private void frmActividades_VisibleChanged(object sender, EventArgs e)
+        {
+            limpiar();
         }
     }
 }

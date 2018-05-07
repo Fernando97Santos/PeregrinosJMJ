@@ -234,6 +234,10 @@
     <Content Include="Icons\cancel-512.png" />
     <Content Include="Icons\check.png" />
     <Content Include="Icons\cross.png" />
+    <Content Include="Icons\eliminar.png" />
+    <Content Include="Icons\guardar.png" />
+    <Content Include="Icons\limpiar.png" />
+    <Content Include="Icons\modificar.png" />
     <Content Include="Icons\money.png" />
     <Content Include="Icons\salir.png" />
     <Content Include="Icons\user.png" />
